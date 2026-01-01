@@ -59,10 +59,26 @@ def engineer_features(df, cases_col='total_cases', temp_col=None, precip_col=Non
     
     return df_clean.reset_index(drop=True), features
 
-def get_processed_data(file_path, label_path=None, cases_col='total_cases', temp_col=None, precip_col=None, city_filter=None):
+def get_processed_data(
+    file_path, 
+    label_path=None, 
+    cases_col='total_cases', 
+    temp_col=None, 
+    precip_col=None, 
+    city_filter=None,
+    method='2sigma',
+    sigma=2.0
+):
     raw_df = load_dengue_data(file_path, label_path, city_filter)
-    clean_df, features = engineer_features(raw_df, cases_col, temp_col, precip_col)
+    clean_df, features = engineer_features(
+        raw_df, 
+        cases_col=cases_col, 
+        temp_col=temp_col, 
+        precip_col=precip_col,
+        method=method,
+        sigma=sigma
+    )
     
-    print(f"--- Dataset Processed ---")
+    print(f"--- Dataset Processed ({method.upper()}) ---")
     print(f"Rows: {len(clean_df)} | Spike Rate: {clean_df['spike'].mean():.2%}")
     return clean_df, features

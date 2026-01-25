@@ -26,7 +26,7 @@ The system operates on a dual‑layer pipeline:
 * **Model:** Decision Tree with a slim feature set.
 * **Baseline:** Momentum‑only heuristic for comparison.
 * **Key finding:** “Momentum trap” and limited independent value from short precipitation lags.
-* **Notebook:** [notebooks/01_exploratory_analysis.ipynb](notebooks/01_exploratory_analysis.ipynb)
+* **Notebook:** [notebooks/Phase_1_Exploratory_Analysis.ipynb](notebooks/Phase_1_Exploratory_Analysis.ipynb)
 
 **Phase 2: India Validation (Kerala + Karnataka)**
 * **Data:** Digitized weekly cases from Kerala and Karnataka (2023–2025) + synthetic history extension.

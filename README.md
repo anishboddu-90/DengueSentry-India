@@ -34,7 +34,7 @@ The system operates on a dual‑layer pipeline:
 * **Model:** Random Forest with class imbalance handling and threshold optimization.
 * **Signals:** NASA POWER weather, momentum, seasonal features, optional Google Trends.
 * **Goal:** Improve recall while preserving biological interpretability.
-* **Notebook:** [notebooks/03_phase2_validation.ipynb](notebooks/03_phase2_validation.ipynb)
+* **Notebook:** [notebooks/Phase_2_Regional_Adaptation_and_Synthetic_Augmentation.ipynb](notebooks/Phase_2_Regional_Adaptation_and_Synthetic_Augmentation.ipynb)
 
 ---
 

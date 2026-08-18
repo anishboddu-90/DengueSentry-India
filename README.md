@@ -1,17 +1,17 @@
-# DengueSentry-India 🦟📊
+# DengueSentry-India
 **An interpretable Early Warning System (EWS) for dengue outbreak prediction in India.**
 
 [![Python 3.10.19](https://img.shields.io/badge/python-3.10.19-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 📌 Project Overview
+##  Project Overview
 **DengueSentry-India** is a hybrid framework that combines statistical surveillance with machine learning to forecast dengue outbreak risk. We use the **Farrington Flexible Algorithm** (R surveillance) to define outbreak labels and a **Random Forest** classifier to predict next‑week spikes using weather, momentum, and lag features. **SHAP** is used for interpretability.
 
 **Current Status:** Phase 2 validation is focused on Indian data (Kerala + Karnataka, 2023–2025) with synthetic historical augmentation to satisfy Farrington baselines.
 
 ---
 
-## 🚀 Technical Architecture
+## Technical Architecture
 The system operates on a dual‑layer pipeline:
 1. **Statistical Baseline:** **Farrington Flexible** identifies outbreak alarms from weekly cases.
 2. **Predictive Model:** **Random Forest** predicts next‑week spike risk using weather, lags, momentum, and seasonality features.
@@ -19,7 +19,7 @@ The system operates on a dual‑layer pipeline:
 
 ---
 
-## 🧭 Project Evolution (Phase 1 → Phase 2)
+## Project Evolution (Phase 1 → Phase 2)
 **Phase 1: Benchmark Foundation (San Juan)**
 * **Data:** DengAI San Juan benchmark.
 * **Outbreak definition:** 2‑sigma anomaly vs. 52‑week rolling mean.
@@ -38,7 +38,7 @@ The system operates on a dual‑layer pipeline:
 
 ---
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 This project requires both **Python** and **R**. We recommend using **Conda** to manage the cross-language dependencies (especially for rpy2).
 
 ### Option A: Using Conda (Recommended)
@@ -54,7 +54,7 @@ pip install -r requirements.txt
 ```
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 * **data/**: Weekly epidemiological records and merged climate variables.
 * **notebooks/**: Phase 1 benchmark, Indian data acquisition, and Phase 2 validation notebooks.
@@ -64,7 +64,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📈 Key Methodology: The Farrington‑ML Hybrid
+## Key Methodology: The Farrington‑ML Hybrid
 Unlike standard regression models, this project uses Farrington to define the **target variable**.
 
 * **The Problem:** Raw case counts alone don’t indicate true outbreaks.
@@ -72,7 +72,7 @@ Unlike standard regression models, this project uses Farrington to define the **
 
 ---
 
-## 🔬 Phase 2 Focus (India Validation)
+## Phase 2 Focus (India Validation)
 * **Regions:** Kerala + Karnataka (2023–2025) with synthetic historical extension.
 * **Signals:** NASA POWER weather + momentum + lag features.
 * **Goal:** Achieve strong recall on outbreak detection while preserving biological interpretability.
